@@ -99,7 +99,8 @@ div .headerlogo {
     display: grid;
     grid-row: span 2;
     grid-column: 3 / 9;
-    background-image: url('../img/pugifylogga.png');
+    width: 281px; height: 103px;
+    background: url('../img/css_sprites.png') -370px -154px;
 }
 
 
@@ -345,6 +346,7 @@ div.payleft {
     grid-column: 2 / 3;
     grid-row: 2 / 7;
     background-color: inherit;
+    width: 160px; height: 435px;
 }
 
 div.payright {
@@ -352,6 +354,7 @@ div.payright {
   grid-column: 7 / 8;
   grid-row: 2 / 7;
   background-color: inherit;
+  width: 160px; height: 435px;
 }
 
 @media only screen and (min-device-width: 800px) {
@@ -378,7 +381,8 @@ div.payright {
               display: grid;
               grid-column: 2 / 3;
               grid-row: 2 / 7;
-              background-color: inherit;
+              background-color: inherit;  
+              background: url('../img/css_sprites.png') -190px -10px;           
           }
 
           div.payright {
@@ -386,6 +390,7 @@ div.payright {
             grid-column: 7 / 8;
             grid-row: 2 / 7;
             background-color: inherit;
+            background: url('../img/css_sprites.png') -10px -10px;
         }
 
           div.wrappercheckout {
@@ -459,10 +464,11 @@ div.payright {
         }
     
         div .headerlogo {
-            background-image: url('../img/pugifydesktop.png');
             display: grid;
             grid-row: span 2;
             grid-column: 7 / 9;
+            width: 358px; height: 124px;
+            background: url('../img/css_sprites.png') -370px -10px;
         }
     
         div .slide {
