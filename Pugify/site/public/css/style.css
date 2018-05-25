@@ -20,6 +20,7 @@ div.wrapper {
     grid-template-rows: repeat( 13, 4fr);
     margin-left: auto;
     margin-right: auto;
+    z-index: 10;
 }
 
 div.menu {
@@ -27,27 +28,51 @@ div.menu {
     width: 80vw;
     background-color: #233237;
     position: absolute;
-    display: none;
-    grid-template-rows: repeat(14, 4fr);
-    grid-template-columns: repeat(4, 2fr);
-    transition: 1s;
+    display: block;
+    transform: translateX(-100%);
+    transition: transform ease-out 0.5s;
+    z-index: 11;
 }
 
 div.dropdown {
     display: grid;
-    grid-template-rows: repeat(14, 4fr);
-    grid-template-columns: repeat(8, 2fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-columns: 1fr;
     color: white;
-    transition: 1s;
+    transition: transform ease-out 0.5s;
+    transform: translateX(0%);
+    position: absolute;
+    z-index: 11;
 }
 
 div.lodatva {
     display: grid;
-    grid-row: 2 / 7;
-    grid-column: 2 / 8;
-    background-color: rgb(255, 255, 255);
+    grid-row: 2 / 4;
+    background-color: #a5332e;
     border: solid 4px rgb(105, 102, 102);
-    border-radius: 10px;
+
+    font-family: 'Noticia Text', serif;
+    text-align: center;
+    color: white;
+}
+
+div.lodatre {
+    display: grid;
+    grid-row: 5 / 7;
+    background-color: #a5332e;
+    border: solid 4px rgb(105, 102, 102);
+
+    font-family: 'Noticia Text', serif;
+    text-align: center;
+    color: white;
+}
+
+div.lodafyra {
+    display: grid;
+    grid-row: 8 / 10;
+    background-color: #a5332e;
+    border: solid 4px rgb(105, 102, 102);
+    margin: 0px;
     font-family: 'Noticia Text', serif;
     text-align: center;
     color: white;
@@ -57,7 +82,7 @@ nav {
     display: grid;
     grid-row: 1 / 3;
     grid-column: span 2;
-    background-color:#233237;
+    background-color: #4f0b0a;
     text-align: center;
     color: white;
 }
@@ -74,7 +99,9 @@ div .headerlogo {
     display: grid;
     grid-row: span 2;
     grid-column: 3 / 9;
+    background-image: url('../img/pugifylogga.png');
 }
+
 
 div .kladerloda {
     display: grid;
@@ -83,13 +110,7 @@ div .kladerloda {
     background-color: white;
 }
 
-div .main {
-    display: grid;
-    grid-row: 3 / 14;
-    grid-column: 1 / 9;
-}
-
-div.wrapperklader {
+div .wrapperklader {
     display: grid;
     background-color: #18121E;
     grid-template-columns: repeat( 8, 2fr);
@@ -98,8 +119,510 @@ div.wrapperklader {
     margin-right: auto;
 }
 
-div.welcome {
-    display: grid;
-    grid-row: 3 / 7;
+main {
+    grid-row: 3 / 13;
     grid-column: 1 / 9;
 }
+
+div .welcome {
+    display: grid;
+    grid-row: 1 / 4;
+    grid-column: 1 / 9;
+}
+
+div .slide {
+    grid-row: 4 / 7;
+    grid-column: 1 / 9;
+}
+
+img .slide1 {
+    border: 5px solid white;
+}
+
+div .store {
+    grid-row: 7 / 9;
+    grid-column: 1 / 9;  
+}
+
+div .size {
+    grid-row: 10 / 12;
+    grid-column: 1 / 9;       
+}        
+
+div .footerindex {
+    grid-row: 13 / 14;
+    grid-column: 1 / 9;
+    background-color: #4e0706;
+}
+
+div .footertwitter {
+    grid-row: 13 / 14;
+    grid-column: 1 / 3;
+    background-color: #4e0706;
+}
+
+div .footerinstagram {
+    grid-row: 13 / 14;
+    grid-column: 4 / 6;
+    background-color: #4e0706;
+}
+
+div .footergithub {
+    grid-row: 13 / 14;
+    grid-column: 7 / 9;
+    background-color: #4e0706;
+}
+
+div.knapp1 {
+    display: none;
+    grid-column: 0 / 0;
+    text-align: center;
+}
+
+div.knapp2 {
+    display: none;
+    grid-column: 0 / 0;
+    grid-row: span 2;
+    text-align: center;
+}
+
+div.knapp3 {
+    grid-column: 0 / 0;
+    text-align: center;
+    display: none;
+}
+
+img.imgshadow {
+    box-shadow: 0px 0px 61px -8px rgba(255,255,255,1);
+} 
+
+/* Kläder */
+
+.kopa {
+  font-family: 'Fira Sans Extra Condensed', Arial, sans-serif;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 8px;
+  min-width: 230px;
+  max-width: 300px;
+  width: 100%;
+  font-size: 16px;
+  background-color: #a5332e;
+  color: #111;
+  line-height: 1.2em;
+  text-align: left;
+  box-shadow: 0px 0px 61px -8px rgba(255,255,255,1);
+}
+
+.kopa *,
+.kopa *:before,
+.kopa *:after {
+ -webkit-box-sizing: border-box;
+  box-sizing: border-box; 
+}
+
+div .acc {
+    grid-row: 2 / 13;
+    grid-column: 2 / 8;
+}
+
+.kopa img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+.kopa figcaption {
+  padding: 10px;
+}
+
+.kopa h3 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin: 0 0 4px;
+}
+
+.kopa .price {
+  margin: 8px 0;
+  font-weight: 700;
+  color: #ffff;
+  font-size: 1.5rem;
+}
+
+.kopa .icons {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.kopa .icons a i {
+  display: block;
+  font-size: 30.52941176px;
+  line-height: 40px;
+  width: 40px;
+  background-color: #a5332e;
+  text-align: center;
+  color: #000000;
+
+} 
+
+/* Klader Slut */
+
+/* shoppingcart börjar */
+
+div.wrappercheckout {
+    display: grid;
+    background-color: #18121E;
+    grid-template-columns: repeat( 8, 2fr);
+    grid-template-rows: repeat( 8, 4fr);
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+}
+
+div .pictures {
+    grid-row: 1 / 3;
+    grid-column: 1 / 9;
+}
+
+div .credentials {
+    grid-row: 3 / 7;
+    grid-column: 1 / 9;
+    color: white;
+    text-align: center;
+}
+
+div .buttonpay {
+    box-shadow: 0px 0px 61px -8px rgba(255,255,255,1);
+    text-align: center;
+    grid-row: 7 / 8;
+    grid-column: 4 / 6;
+    background-color: #4e0706;
+    border: solid 4px #ffff; 
+    border-radius: 10px;
+}
+
+div .buttonpay :hover {
+    text-align: center;
+    grid-row: 7 / 8;
+    grid-column: 4 / 6;
+    background-color: rgb(94, 31, 31);
+}
+
+/* Accessoarer */
+
+div .wrapperacc {
+    display: grid;
+    background-color: #18121E;
+    grid-template-columns: repeat( 8, 2fr);
+    grid-template-rows: repeat( 13, 4fr);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div .acc1 {
+    grid-row: 2 / 5;
+    grid-column:  2 / 8;
+}
+
+div .acc2 {
+    grid-row: 6 / 9;
+    grid-column:  2 / 8;
+}
+
+div .acc3 {
+    grid-row: 10 / 13;
+    grid-column:  2 / 8; 
+}
+
+div.payleft {
+    display: none;
+    grid-column: 2 / 3;
+    grid-row: 2 / 7;
+    background-color: inherit;
+}
+
+div.payright {
+    display:none;
+  grid-column: 7 / 8;
+  grid-row: 2 / 7;
+  background-color: inherit;
+}
+
+@media only screen and (min-device-width: 800px) {
+
+        .kopa {
+            font-family: 'Fira Sans Extra Condensed', Arial, sans-serif;
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+            margin: 8px;
+            min-width: 230px;
+            max-width: 300px;
+            width: 100%;
+            font-size: 16px;
+            background-color: #a5332e;
+            color: #111;
+            line-height: 1.2em;
+            text-align: left;
+            box-shadow: 0px 0px 61px -8px rgba(255,255,255,1);
+            align-content: center;
+          }
+
+          div.payleft {
+              display: grid;
+              grid-column: 2 / 3;
+              grid-row: 2 / 7;
+              background-color: inherit;
+          }
+
+          div.payright {
+              display: grid;
+            grid-column: 7 / 8;
+            grid-row: 2 / 7;
+            background-color: inherit;
+        }
+
+          div.wrappercheckout {
+            display: grid;
+            background-color: #18121E;
+            grid-template-columns: repeat( 8, 2fr);
+            grid-template-rows: repeat( 8, 4fr);
+            margin-left: auto;
+            margin-right: auto;
+            align-content: center;
+        }
+          
+    
+        div.knapp1 {
+            grid-column: 1 / 3;
+            text-align: center;
+            display: grid;
+        }
+    
+        div.knapp2 {
+            grid-column: 3 / 5;
+            grid-row: span 2;
+            text-align: center;
+            display: grid;
+        }
+    
+        div.knapp3 {
+            grid-column: 5 / 7;
+            text-align: center;
+            display: grid;
+        }
+    
+        div.knapp1:hover {
+            background-color: #a5332e;
+        }
+    
+        div.knapp2:hover {
+            background-color: #a5332e;
+        }
+    
+        div.knapp3:hover {
+            background-color: #a5332e;
+        }
+    
+        div.menu {
+            height: 100vh;
+            width: 80vw;
+            background-color: #233237;
+            position: absolute;
+            display: block;
+            transform: translateX(-100%);
+            transition: transform ease-out 0.5s;
+            z-index: 11;
+        }
+    
+        nav .material-icons {
+            font-size: 0em;
+        }
+        
+        menu .material-icons {
+            font-size: 0em;
+        }
+     
+        nav {
+            display: grid;
+            grid-row: 1 / 3;
+            grid-column: 1 / 7;
+            background-color: #4f0b0a;
+            color: white;
+            text-align: left;
+        }
+    
+        div .headerlogo {
+            background-image: url('../img/pugifydesktop.png');
+            display: grid;
+            grid-row: span 2;
+            grid-column: 7 / 9;
+        }
+    
+        div .slide {
+            grid-row: 2 / 5;
+            grid-column: 5 / 8;
+        }
+    
+        div .welcome {
+            display: grid;
+            grid-row: 2 / 5;
+            grid-column: 1 / 9;
+        }
+    
+        div .store {
+            grid-row: 5 / 9;
+            grid-column: 2 / 5;  
+        }
+    
+        div .size {
+            grid-row: 5 / 9;
+            grid-column: 5 / 9;
+        }
+    
+        div .footertwitter {
+            grid-row: 8 / 9;
+            grid-column: 1 / 3;
+            background-color: #4e0706;
+            align-content: center;
+        }
+        
+        div .footerinstagram {
+            grid-row: 8 / 9;
+            grid-column: 5 / 6;
+            background-color: #4e0706;
+            align-items: center;
+        }
+        
+        div .footergithub {
+            grid-row: 8 / 9;
+            grid-column: 8 / 9;
+            background-color: #4e0706;
+        }
+    
+        div .footerindex {
+            grid-row: 8 / 9;
+            grid-column: 1 / 9;
+            background-color: #4e0706;
+        }
+    
+        div .wrapperklader {
+            display: grid;
+            background-color: #18121E;
+            grid-template-columns: repeat( 8, 2fr);
+            grid-template-rows: repeat( 8, 4fr);
+            margin-left: auto;
+            margin-right: auto;
+            align-content: center;
+        }
+    
+        div .acc {
+            grid-row: 2 / 6;
+            grid-column: 2 / 8;
+        }
+    
+        .kopa,
+        .kopa :before,
+        .kopa :after {
+        box-sizing: border-box;
+        transition: all 0.35s ease;
+        }
+    
+        div .acc {
+            grid-row: 2 / 13;
+            grid-column: 2 / 8;
+        }
+    
+        .kopa img {
+        max-width: 100%;
+        vertical-align: top;
+        }
+    
+        .kopa figcaption {
+        padding: 10px;
+        }
+    
+        .kopa h3 {
+        font-size: 1.4rem;
+        font-weight: 400;
+        margin: 0 0 4px;
+        }
+    
+        .kopa .price {
+        margin: 8px 0;
+        font-weight: 700;
+        color: #ffff;
+        font-size: 1.5rem;
+        }
+    
+        .kopa .icons {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        }
+    
+        .kopa .icons a {
+        margin: 2px;
+        opacity: 0;
+        -webkit-transform: translateY(50%);
+        transform: translateY(50%);
+        }
+    
+        .kopa .icons a i {
+        display: block;
+        font-size: 23.52941176px;
+        line-height: 40px;
+        width: 40px;
+        background-color: #a5332e;
+        text-align: center;
+        color: #000000;
+        }
+    
+        .kopa .icons a i:hover {
+        background-color: #ffff;
+        color: #a5332e;
+        cursor: pointer;
+        }
+    
+        .kopa:hover a,
+        .kopa.hover a {
+        opacity: 1;
+        transform: translateX(0);
+        }
+    
+        .kopa:hover a:nth-child(2),
+        .kopa.hover a:nth-child(2) {
+        transition-delay: 0.5s;
+        }
+    
+        .kopa:hover a:nth-child(3),
+        .kopa.hover a:nth-child(3) {
+        transition-delay: 0.5s;
+        }
+    
+        div .pictures {
+            grid-row: 1 / 3;
+            grid-column: 4 / 7;
+        }
+    
+        div .wrapperacc {
+            display: grid;
+            background-color: #18121E;
+            grid-template-columns: repeat( 8, 2fr);
+            grid-template-rows: repeat( 8, 4fr);
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
